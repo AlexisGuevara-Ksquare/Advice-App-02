@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button } from "./Button";
+import { TwitterButton } from "./TwitterButton";
 
 type AdviceData = {
     slip: {
@@ -31,10 +32,10 @@ export const Card = () => {
         </div>
         <hr />
         {/* Button component - Next one */}
-        <Button content="Another One Please" />
+        <Button content="Another One Please" onClick={randomAdvice} />
         <br />
         <br />
-        <Button content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo"/>} />
+        <TwitterButton content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo"/>}/>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 
 type Button = {
-    content: string | JSX.Element;
+    content: string;
+    onClick?: () => void;
 }
 
-export const Button = ({content}:Button) => {
+export const Button = ({content, onClick }:Button) => {
   return (
     <>
-        <button className="button">{content}</button>
+        <button className="button" onClick={onClick}>{content}</button>
     </>
   )
 }
