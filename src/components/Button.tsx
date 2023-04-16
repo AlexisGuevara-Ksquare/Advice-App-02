@@ -7,7 +7,7 @@ type Button = {
 export const Button = ({content, onClick }:Button) => {
   return (
     <>
-        <button className="button" onClick={onClick}>{content}</button>
+        <button className="button bttnNextOne" onClick={onClick}>{content}</button>
     </>
   )
 }

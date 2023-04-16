@@ -13,7 +13,7 @@ export const TwitterButton = ({content, advice}:TwitterButton) => {
 
   return (
     <>
-        <button className="button" onClick={tweet}>{content}</button>
+        <button className="button bttnTweet" onClick={tweet}>{content}</button>
     </>
   )
 }
