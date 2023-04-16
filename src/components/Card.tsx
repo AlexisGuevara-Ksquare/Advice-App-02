@@ -35,7 +35,7 @@ export const Card = () => {
         <Button content="Another One Please" onClick={randomAdvice} />
         <br />
         <br />
-        <TwitterButton content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo"/>}/>
+        <TwitterButton content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo" />} advice={advice}/>
     </div>
   )
 }
