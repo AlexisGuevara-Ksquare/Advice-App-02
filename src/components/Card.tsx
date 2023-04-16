@@ -12,11 +12,21 @@ export const Card = () => {
 
     const [advice, setAdvice] = useState<string>('');
 
+    // Change background color random whe new advice is loaded
+    const changeBackground = () => {
+    // Generate a random 6 character hex color value
+    const hexVal = Math.floor(Math.random() * 0xffffff).toString(16);
+
+    // Set the background color of the page to the generated color
+    document.body.style.background = `#${hexVal}`;
+    }
+
     let randomAdvice = async() => {
         let response = await fetch('https://api.adviceslip.com/advice');
         let data: AdviceData = await response.json();
         console.log(data);
         setAdvice(data.slip.advice);
+        changeBackground();
     }
 
     useEffect(() => {
