@@ -21,6 +21,7 @@ export const Card = () => {
     document.body.style.background = `#${hexVal}`;
     }
 
+    // Function to get API info
     let randomAdvice = async() => {
         let response = await fetch('https://api.adviceslip.com/advice');
         let data: AdviceData = await response.json();
@@ -29,6 +30,7 @@ export const Card = () => {
         changeBackground();
     }
 
+    // useEffect so the advice load when app start
     useEffect(() => {
         randomAdvice();
     }, []);
@@ -41,9 +43,11 @@ export const Card = () => {
             <p id="adviceContent">"{advice}"</p>
         </div>
         <hr />
-        {/* Button component - Next one */}
+        {/* Button wrapper with 2 Button components */}
         <div className="button-container">
+            {/* Component Button so user can see another advice */}
             <Button content="Another One Please" onClick={randomAdvice} />
+            {/* Component Button so user can tweet advice */}
             <TwitterButton content={<img width={20} height={20} src="https://seeklogo.com/images/T/twitter-logo-1DEF94C339-seeklogo.com.png" alt="Twitter logo" />} advice={advice}/>
         </div>
     </div>

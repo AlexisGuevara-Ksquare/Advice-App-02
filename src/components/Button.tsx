@@ -1,4 +1,5 @@
 
+// type of content Button will take
 type Button = {
     content: string;
     onClick?: () => void;
