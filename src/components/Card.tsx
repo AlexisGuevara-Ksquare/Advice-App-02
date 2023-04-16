@@ -32,10 +32,10 @@ export const Card = () => {
         </div>
         <hr />
         {/* Button component - Next one */}
-        <Button content="Another One Please" onClick={randomAdvice} />
-        <br />
-        <br />
-        <TwitterButton content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo" />} advice={advice}/>
+        <div className="button-container">
+            <Button content="Another One Please" onClick={randomAdvice} />
+            <TwitterButton content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo" />} advice={advice}/>
+        </div>
     </div>
   )
 }
