@@ -1,12 +1,19 @@
 
 type TwitterButton = {
     content: JSX.Element;
+    advice: string;
 }
 
-export const TwitterButton = ({content}:TwitterButton) => {
+export const TwitterButton = ({content, advice}:TwitterButton) => {
+
+  let tweet = () => {
+    let tweetURL = `https://twitter.com/intent/tweet?url=${advice}`;
+    window.open(tweetURL, "_blank");    
+  }
+
   return (
     <>
-        <button className="button">{content}</button>
+        <button className="button" onClick={tweet}>{content}</button>
     </>
   )
 }
