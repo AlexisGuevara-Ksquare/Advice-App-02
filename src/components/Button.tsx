@@ -1,6 +1,6 @@
 
 type Button = {
-    content: string;
+    content: string | JSX.Element;
 }
 
 export const Button = ({content}:Button) => {

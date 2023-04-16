@@ -27,10 +27,15 @@ export const Card = () => {
         <h1>Advice App</h1>
         {/* Container for text advice */}
         <div className="content">
-            <p id="adviceContent">{advice}</p>
+            <p id="adviceContent">"{advice}"</p>
         </div>
+        <hr />
         {/* Button component - Next one */}
         <Button content="Another One Please" />
+        <br />
+        <br />
+        <Button content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo"/>} />
     </div>
   )
 }
+
