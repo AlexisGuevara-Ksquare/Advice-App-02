@@ -44,7 +44,7 @@ export const Card = () => {
         {/* Button component - Next one */}
         <div className="button-container">
             <Button content="Another One Please" onClick={randomAdvice} />
-            <TwitterButton content={<img src="./src/assets/twitterIcon.png" alt="Twitter logo" />} advice={advice}/>
+            <TwitterButton content={<img width={20} height={20} src="https://seeklogo.com/images/T/twitter-logo-1DEF94C339-seeklogo.com.png" alt="Twitter logo" />} advice={advice}/>
         </div>
     </div>
   )
