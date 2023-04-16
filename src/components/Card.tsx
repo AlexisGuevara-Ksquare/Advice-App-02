@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Button } from "./Button";
 
 type AdviceData = {
     slip: {
@@ -28,6 +29,8 @@ export const Card = () => {
         <div className="content">
             <p id="adviceContent">{advice}</p>
         </div>
+        {/* Button component - Next one */}
+        <Button content="Another One Please" />
     </div>
   )
 }
